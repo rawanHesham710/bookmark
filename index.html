@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+
+<body>
+
+    <div class="container mt-5 mb-3">
+        <div class="headdiv pb-5">
+            <h1 class="text-center position-relative mb-4">Bookmarker</h1>
+        </div>
+        <div class="text-center bookmark mt-3">
+            <p><span><i class="fa-solid fa-bookmark"></i></span> Bookmark your favorite sites <span><i
+                        class="fa-solid fa-bookmark"></i></span></p>
+        </div>
+    </div>
+    <div class="container headdiv pb-4">
+        <label class="mb-2 fw-bold"  for="name"><span><i class="fa-solid fa-book-bookmark"></i></span> Site Name</label>
+        <input type="text" id="name" oninput="nameValidation()" placeholder="Bookmark Name" class="form-control mb-4">
+        <div class="alert alert-danger d-none" id="nameValid" role="alert">
+            name must contain atleast 3 characters
+          </div>
+
+        <label class="mb-2 fw-bold"  for="url"><span><i class="fa-solid fa-link"></i></span> Site URL</label>
+        <input type="text" id="url" placeholder="Website URL" oninput="urlValidation()" class="form-control mb-4">
+        <div class="alert alert-danger d-none" id="urlValid" role="alert">
+            URL not valid
+          </div>
+
+        <div class="w-25 m-auto mt-4">
+        <button onclick="getInfo()" class="text-white btn btn-danger px-5 m-auto">Submit</button>
+
+        </div>
+    </div>
+
+    <table class="container table mt-4">
+        <thead>
+            <tr class="text-center">
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="display">
+         
+        </tbody>
+    </table>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
